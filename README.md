@@ -29,3 +29,22 @@ Keep track of clicked URLs in a set.
 If the maximum number of clicks has been reached, exit the loop.
 Close the new tab and switch back to the original tab.
 If a link has already been clicked before, exit the loop.
+
+## 2.FASTER AI NEWS SCRIPT (RUN WITH FLAG)
+##INSTRUCTIONS
+
+This Python code uses the Selenium WebDriver API to scrape news articles from the website "https://news.ycombinator.com/news". The script is designed to search for a specific keyword provided as a command line argument and count the number of times it appears on each page that it visits.
+
+The code starts by importing necessary libraries such as Selenium WebDriver, options, keys, action chains, time, urllib.parse, exceptions and system.
+
+Then, it checks if the user provided a keyword in the command line argument. If not, it displays a usage message and exits the script.
+
+After that, the script creates an instance of the Chrome WebDriver and navigates to the Hacker News website. It then maximizes the window.
+
+The code loops over the articles on the website and opens each article in a new tab. If the article has not been visited before, the script searches for the provided keyword on the page and increments the keyword count if it is found.
+
+Once the maximum number of articles have been visited or the provided keyword is not found on any of the visited pages, the code loops over the comments on the website and opens each comment section in a new tab. If the comment section has not been visited before, the script searches for the provided keyword on the page and increments the keyword count if it is found.
+
+Finally, the script prints the keyword counts for each keyword provided as the command line argument.
+
+It is important to note that this script is specific to the Hacker News website and may not work on other websites without significant modifications. 
